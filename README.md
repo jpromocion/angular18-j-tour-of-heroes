@@ -11,7 +11,8 @@ Este proyecto es generado con [Angular CLI](https://github.com/angular/angular-c
 Lo subido es el tutorial completado ya hasta el final.
 
 
-> English translate:
+> **English translate**:
+>
 > Tutorial "Tour Of Heroes" for Angular version 17 [Angular 17 TourOfHeroes](https://v17.angular.io/tutorial/tour-of-heroes) has been developed on Angular 18, fixing the differences due to the "standalone" mode which is now the preferred and default mode with Angular 18.
 >
 > Thanks to [Guido Flohr](https://www.guido-flohr.net/standalone-angular-tour-of-heroes/#) for explaining the problem and how to solve the issues that arise.
@@ -28,27 +29,31 @@ Lo subido es el tutorial completado ya hasta el final.
 
 Una vez descargado de github: `npm install` para instalar dependencias.
 
-> English translate:
+> **English translate**:
+>
 > Once downloaded from GitHub, run `npm install` to install dependencies.
 
 ## Servidor de desarrollo / Development server
 
 Ejecutar `ng serve` para el servidor de desarrollo. Navegar a `http://localhost:4200/`. La aplicación se recarga automaticamente tras modificar los archivos fuente.
 
-> English translate:
+> **English translate**:
+>
 > Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Incrementar código / Code scaffolding
 
 Ejecutar `ng generate component component-name` para generar un nuevo componente. Puedes usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-> English translate:
+> **English translate**:
+>
 > Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Montar / Build
 
 Ejecutar `ng build` para construir el proyecto. El artefacto montado será guardado en el directorio `dist/`.
 
-> English translate:
+> **English translate**:
+>
 > Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
