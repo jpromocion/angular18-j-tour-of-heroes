@@ -1,0 +1,59 @@
+<h2>My Heroes</h2>
+<!--FORMULARIO EJEMPLO ANTERIOR
+<div>
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <form [formGroup]="heroForm" >
+    <label for="name">Hero name: </label>
+    <input id="name" type="text" formControlName="name" placeholder="hero name"/>
+  </form>
+
+</div>
+-->
+
+
+<!-- Bloque para incluir uno nuevo-->
+<div>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add hero
+  </button>
+</div>
+
+<!-- Listar los heroes-->
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <!--class.select: Selector de clase css condicional.
+    Cuando la fila actual sea la misma que selectedHero, angular añade la clase css "selected".
+    CUando el heroe sea distinto al seleccionado, Angular quita esa clase class.
+    La clase  en el css se ha creado para remarcar en negro el seleccionado.
+    -->
+    <!--OLD: simplificamos cuando hemos creado la ruta al componente detalle con el enrutador
+    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+    -->
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button type="button" class="delete" title="delete hero"
+      (click)="delete(hero)">x</button>
+  </li>
+</ul>
+
+<!-- Ahora el detalle lo pasamsos a un compontente hijo, y pasamos al crearse
+ el heroes seleccionado utilizando la propiedad hero creada en el mismo.
+ [hero]="selectedHero" -> En un one-way data binding
+ -->
+ <!--
+ DEPRECATED: al meter el enrutador, ya no se inserta a mano el detalle debajo,
+ pues se accede al detalle por la URL "detail/:id" en otra pagina aparte
+ -->
+ <!--
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+-->
+

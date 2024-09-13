@@ -1,0 +1,17 @@
+<div id="search-component">
+  <label for="search-box">Hero Search</label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <!-- ngFor no funcionaria con un Observable directamente, por eso es necewario la "| async"
+     Con esto se suscribira a Observable  automaticamente, para mostrar cuando sea recuperado.
+     Nos acaba mostrando un combo con los resultados filtrados por lo escrito.
+     -->
+    <li *ngFor="let hero of heroes$ | async" >
+      <!--Si se pulsa uno de los valores devueltos en el combo... redirige a la pagina del detalle-->
+      <a routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+      </a>
+    </li>
+  </ul>
+</div>
